@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="sujet.css">
+  <link rel="stylesheet" href="all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="all.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="sujet.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md  navbar-dark">
+  <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" style="width:40px;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <span onclick="accuille()"><li  class="nav-item li">
+        Accuille
+      </li></span>
+     <span onclick="ajouté()"> <li class="nav-item li">
+        Ajouté un sujet
+      </li></span>
+     <span onclick="liste()"> <li class="nav-item li">
+        Liste des sujet
+      </li>    </span>
+    </ul>
+  </div>  
+  </nav>
+  <br>
+
+  <div class="container-fluid">
+      <div id="accuille">
+   <div class="row" id="d1">
+  <div class="col-md-1">
+    <div id="media">
+    <img src="L 1.png" style="height: 20vh;width: 3px;"><br>
+    <a href="" ><i class="fab fa-linkedin" style="width: 30px;height: 30px; margin-top: auto;"></i></a><br>
+    <a href="https://www.google.com/maps/place/Solicode+Tanger/@35.7463336,-5.8277227,17z/data=!3m1!4b1!4m5!3m4!1s0xd0b87c216892bc7:0x48bdf85995e9c186!8m2!3d35.7463336!4d-5.825534"><i class="fas fa-map-marker-alt"style="width: 30px;height: 30px;margin-top: 10px;"></i></a><br>
+    <a href="https://www.facebook.com/solicodetanger/posts/151280163251536"><i class="fab fa-facebook-f" style="width: 30px;height: 30px; margin-top: 10px;"></i></a><br>
+    <a href="https://www.instagram.com/solicodetanger/?hl=fr"><i class="fab fa-instagram" style="width: 30px;height: 30px;margin-top: 10px;"></i></a><br>
+    <a href=""><i class="fab fa-twitter-square" style="width: 30px;height: 30px;margin-top: 10px;"></i></a> <br>
+    <img src="L2.png" style="height: 20vh;" style="width: 30px;height: 30px; margin-left:10px;">
+    
+</div>
+</div>
+<div class="col-sm-5" style="padding-top: 10%;">
+    <h1 style="font-size: 88px;color: #696866;margin-left: 100px;">HTM</h1>
+    <p style="font-size: 34px;margin-left: 100px;">HTM. la puissance <br> de votre coté</p>
+    <br>
+   <a href="#d2"> <button style="font-size: 28px;background-color: #ebd792; margin-left: 150px;width: 60px;"><i class="fa fa-angle-double-down"></i></button></a>
+</div>
+<div class="col-sm-6" style="margin-top: 50px;">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="solicode3.PNG"  class="car" alt="s3" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>spaces</h3>
+              <p></p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="solicode1.PNG" class="car" alt="s1"  width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>Prsentation</h3>
+              <p></p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="solicode2.PNG"  class="car" alt="s2" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>Career center</h3>
+              
+            </div>   
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+</div>
+ </div>
+ <div class="row" id="d2" style="padding-bottom: 50px;">
+     <div class="col-sm-6">
+         <img src="photo1.png" style="width: 40vw;height: 100vh;" alt="photo">
+     </div>
+     <div class="col-sm-6">
+         <h2 class="text-center" style="margin-top: 60px;font-size: 56px;">Apropos de nous :</h2><br>
+         <p class="text-center" style="font-size: 24px;">
+
+            Notre site permet d'affichée les listes <br>
+             du sujets et  faciliter d'accèderez à <br>
+            tous les sujets de veuille  de notre <br>
+            group dans le drive.</p>
+     </div>
+ </div>
+ <div class="row" id="d3" style="padding-bottom: 300px;">
+    <div class="col-sm-6">
+        <br>
+        <br>
+        <h2> travail en group:</h2><br>
+
+        <p> Un  travail de groupe est un regroupement d'un petit nombre (moins de 15) d'individus dont l'objet est la réalisation d'un travail commun.
+        Un  travail de groupe n’est ni une famille, ni une bande, ni un groupe d’amis, c’est un groupe de personnes qui ont des relations interpersonnelles de face à face. Il est caractérisé par la convergence des efforts, par l’exécution d’une tâche qui sera l’œuvre commune.</p>
+    </div>
+    <div class="col-sm-6">
+        <img src="tg.jpeg" style="width: 40vw;border-radius: 30px;" alt="">
+    </div>
+</div>
+</div>
+<div id="ajouté">
+    <form class="container1"><br><br><br>
+        <h1 class="text-center  text-white-50 ">AJOUTE LE SUJET</h1><br><br>
+            <div class="form-group">
+                 <div class="form-row">
+                <label class="col-md-3 text-white-50" for="sujet">SUJET</label> 
+                <div class="col-md-9">
+                    <input id="sujet" type="text" class="form-control rounded-pill py-2 border-right-0 border" ><br>
+                    <p id="noms" style="display: none; color: red;" > Entrer le nom du sujet </p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <div class="row">
+                <label class="col-md-3 text-white-50" for="date">DATE</label> 
+                <div class="col-md-9">
+                     <input id="date" type="date" class="form-control rounded-pill py-2 border-right-0 border inpt" name="date" ><br>
+                     <p id="dat" style="display: none; color: red;" > Entrer la date </p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="row">
+                  <label class="col-md-3 text-white-50" for="opprenant">LES APPRENANTS</label> 
+                  <div class="col-md-9">
+                       <input id="apprenant" type="text" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
+                       <p id="appr" style="display: none; color: red;" > Entrer les apprenants </p>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <div class="row">
+                  <label class="col-md-3 text-white-50" for="tags">TAGS</label> 
+                  <div class="col-md-9">
+                       <input id="tags" type="text" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
+                       <p id="tag" style="display: none; color: red;" > Entrer les tags </p>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="form-group">
+                <div class="row">
+                  <label class="col-md-3 text-white-50" for="lien">LIEN</label> 
+                  <div class="col-md-9">
+                       <input id="lien" type="text" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
+                       <p id="lie" style="display: none; color: red;" > Entrer le lien </p>
+                  </div>
+                </div>
+              </div>
+              <br>
+            
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-3 offset-md-9">
+                       <button id="btn" onclick="add()" class=" btn btn-light btn-rounded btn-lg text-black-50 ">AJOUTER</button>
+                  </div>
+              </div>
+            </div>
+         
+    </form>
+</div>
+</div>
+<div id="listes">
+    <div id="pagesearch">
+
+        <input class="rech" id="search" type="search " placeholder="recherch" >
+
+        <button type="butt" >Affiche</button><br><br><br><br>
+        <div id="match-list"></div>
+   </div>
+
+
+
+<div id="pagelist">
+   
+
+   <div class="first">
+       <h1>liste de sujet du vielle</h1>
+
+       <div class="2th">
+<ul>           
+               <div id="demo">
+
+
+
+
+                 <!-- 1 -->
+               <li >intelligence Artificielle   
+                    <button type="button" data-toggle="collapse" data-target="#a1">+</button>
+                    </li>
+                      <div id="a1" class="collapse div1" >
+                        <form class="all">
+                            
+                         </form>
+                      </div>
+                    </div>
+                    <br>
+
+                  <!-- 2 -->
+
+
+               <li>adobe color (choix des colours par théme) 
+                   <button type="button" data-toggle="collapse" data-target="#a2">+</button>
+               </li>
+               <div id="a2" class="collapse div1" >
+                 <form class="all">
+                   
+                 </form>
+                </div>
+               </div>   <br>
+</ul><ul>
+              <!-- 3 -->
+
+               <li>crice sanitaire et applications mobiles    
+                 <button type="button" data-toggle="collapse" data-target="#a3">+</button>
+               </li><br>
+               <div id="a3" class="collapse div1" >
+                 <form class="all">
+                   
+                 </form>
+                </div>
+               </div>   <br>
+
+</ul><ul>
+
+                <!-- 4 -->
+
+
+               <li>hosting          
+                 <button type="button" data-toggle="collapse" data-target="#a4">+</button>
+               </li><br>
+               <div id="a4" class="collapse div1" >
+                 <form class="all">
+                  
+                 </form>
+                </div>
+                <br>
+               </ul><ul>
+               <!-- 5 -->
+
+
+               <li>bitcoin          
+                 <button type="button" data-toggle="collapse" data-target="#a5">+</button>
+               </li><br>
+
+               <div id="a5" class="collapse div1" >
+                 <form class="all">
+                   
+                 </form>
+                </div>
+                 <br>
+
+               </ul><ul>             
+
+               <!-- 6 -->
+
+              <li> marketing digital      
+               <button type="button" data-toggle="collapse" data-target="#a6">+</button>
+             </li><br>
+             <div id="a6" class="collapse div1" >
+               <form class="all">
+                 
+               </form>
+              </div>
+               <br>
+             </ul><ul>
+
+
+
+
+              <!-- 7 -->
+              <li>cybersécurité         
+               <button type="button" data-toggle="collapse" data-target="#a7">+</button>
+             </li><br>
+             <div id="a7" class="collapse div1" >
+               <form class="all">
+                 
+               </form>
+              </div>
+                <br>
+               </ul><ul>
+
+              <!-- 8 -->
+
+              <li>des robots pour lutter contre le couvid-19     
+               <button type="button" data-toggle="collapse" data-target="#a8">+</button>
+             </li><br>
+
+             <div id="a8" class="collapse div1" >
+               <form class="all">
+                 
+               </form>
+              </div>
+              <br>
+             </ul><ul>
+
+              <!-- 9 -->
+              <li>voitures sans polote        
+               <button type="button" data-toggle="collapse" data-target="#a9">+</button>
+             </li><br>
+
+             <div id="a9" class="collapse div1" >
+               <form class="all">
+                
+               </form>
+              </div>
+                <br>
+               </ul><ul>
+             <!-- 10 -->
+
+
+              <li>processus de l'ux design       
+               <button type="button" data-toggle="collapse" data-target="#a10">+</button>
+             </li><br>
+
+             <div id="a10" class="collapse div1" >
+               <form class="all">
+               
+               </form>
+              </div>
+             <br>
+           </ul><ul>
+                <!--11  -->
+
+              <li>données personnelles sur le web    
+               <button type="button" data-toggle="collapse" data-target="#a11">+</button>
+             </li><br>
+
+             <div id="a11" class="collapse div1" >
+               <form class="all">
+                 
+               </form>
+              </div>
+               <br>
+             </ul><ul>
+             <!-- 12 -->
+
+              <li>meilleurs platformes e-learning     
+               <button type="button" data-toggle="collapse" data-target="#a12">+</button>
+             </li><br>
+             <div id="a12" class="collapse div1" >
+               <form class="all">
+                
+               </form>
+              </div>
+             <br>
+           </ul><ul>
+
+               <!--13  -->
+
+              <li>edward snowden       
+               <button type="button" data-toggle="collapse" data-target="#a13">+</button>
+             </li><br>
+
+             <div id="a13" class="collapse div1" >
+               <form class="all">
+                
+               </form>
+              </div>
+               <br>
+             </ul><ul>
+             <!-- 14 -->
+
+              <li>dropshipping         
+               <button type="button" data-toggle="collapse" data-target="#a14">+</button>
+             </li><br>
+
+             <div id="a14" class="collapse div1" >
+               <form class="all">
+                 
+               </form>
+              </div>
+                
+               </ul><ul>
+               <!-- 15 -->
+
+              <li>white vs black hacker        
+               <button type="button" data-toggle="collapse" data-target="#a15">+</button>
+             </li><br>
+
+
+             <div id="a15" class="collapse div1" >
+               <form class="all">
+                 
+               </form>
+              </div>
+                
+
+
+
+
+ </ul>        
+        
+</div>  
+
+   </div>
+
+ 
+   <!-- <div class="container">
+       <h2>Simple Collapsible</h2>
+       <p>Click on the button to toggle between showing and hiding content.</p>
+       <button type="button"  >Simple collapsible</button>
+       
+     </div>
+-->
+
+
+</div>
+
+
+
+<script src="vielle.js"></script>
+
+
+</div>
+<footer>
+<div>
+<nav class="navbar navf navbar-expand-sm navbar-default fixed-bottom">
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" style="width:40px;"></a>
+    <span class="navbar-text" style="margin-left: 70px; color: #FAF5F5;">
+        <i class='fas fa-copyright'></i>All right reserved 2021 </span>
+    <ul class="navbar-nav">
+        <li class="nav-item lif"><a href=""><i class="fab fa-linkedin"></i></a></li>
+      <li class="nav-item lif">
+          <a href="https://www.facebook.com/solicodetanger/posts/151280163251536"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="nav-item lif">
+          <a href="https://www.instagram.com/solicodetanger/?hl=fr"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="nav-item lif">
+           <a href=""><i class="fab fa-twitter-square"></i></a> 
+        </li>
+        <li class="nav-item lif" ><a href="https://www.google.com/maps/place/Solicode+Tanger/@35.7463336,-5.8277227,17z/data=!3m1!4b1!4m5!3m4!1s0xd0b87c216892bc7:0x48bdf85995e9c186!8m2!3d35.7463336!4d-5.825534"><img src="position.PNG" alt="posiotion" id="media" style="border-radius: 30px;"></a></li>
+     
+  </nav>
+</div>
+</footer>
+
+</body>
+</html>
