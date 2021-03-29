@@ -63,12 +63,13 @@ ul{
 }
 .container1{
     width: 50%;
-    height: 110vh;
+    height: 100vh;
     background-color: #A6A2A1;
     margin: 5%;
    margin-left: 20%;
-   border-radius: 10%;
+   border-radius: 10px;
    padding-bottom: 400px;
+
    margin-bottom: 400px;
 }
 h1{font-family:ocr a;}
