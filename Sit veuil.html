@@ -31,6 +31,7 @@
      <span onclick="liste()"> <li class="nav-item li">
         Liste des sujet
       </li>    </span>
+     
     </ul>
   </div>  
   </nav>
@@ -125,13 +126,13 @@
 </div>
 </div>
 <div id="ajouté">
-    <form class="container container1">
+    <form class="container container1" action="http://127.0.0.1:4000/myform" method="GET" >
         <h1 class="text-center  text-white-50 ">AJOUTE LE SUJET</h1>
             <div class="form-group">
                  <div class="form-row">
-                <label class="col-md-3 text-white-50" for="sujet">TITRE DU SUJET</label> 
+                <label class="col-md-3 text-white-50" for="sujet">TITRE DU SUJET:</label> 
                 <div class="col-md-9">
-                    <input id="sujet" type="text" class="form-control rounded-pill py-2 border-right-0 border" ><br>
+                    <input id="sujet" type="text" name="sujet" class="form-control rounded-pill py-2 border-right-0 border" ><br>
                     <p id="noms" style="display: none; color: red;" > Entrer le nom du sujet </p>
                 </div>
               </div>
@@ -139,9 +140,9 @@
             <br>
             <div class="form-group">
               <div class="row">
-                <label class="col-md-3 text-white-50" for="date">DATE</label> 
+                <label class="col-md-3 text-white-50" for="date">DATE:</label> 
                 <div class="col-md-9">
-                     <input id="date" type="date" class="form-control rounded-pill py-2 border-right-0 border inpt" name="date" ><br>
+                     <input id="date" type="date" name="date" class="form-control rounded-pill py-2 border-right-0 border inpt" name="date" ><br>
                      <p id="dat" style="display: none; color: red;" > Entrer la date </p>
                 </div>
               </div>
@@ -149,9 +150,9 @@
             <br>
             <div class="form-group">
                 <div class="row">
-                  <label class="col-md-3 text-white-50" for="opprenant">LES APPRENANTS</label> 
+                  <label class="col-md-3 text-white-50" for="opprenant">LES APPRENANTS:</label> 
                   <div class="col-md-9">
-                       <input id="apprenant" type="text" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
+                       <input id="apprenant" type="text" name="apprenant" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
                        <p id="appr" style="display: none; color: red;" > Entrer les apprenants </p>
                   </div>
                 </div>
@@ -159,9 +160,9 @@
               <br>
               <div class="form-group">
                 <div class="row">
-                  <label class="col-md-3 text-white-50" for="tags">TAGS</label> 
+                  <label class="col-md-3 text-white-50" for="tags">TAGS:</label> 
                   <div class="col-md-9">
-                       <input id="tags" type="text" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
+                       <input id="tags" type="text" name="tags" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
                        <p id="tag" style="display: none; color: red;" > Entrer les tags </p>
                   </div>
                 </div>
@@ -170,9 +171,9 @@
 
               <div class="form-group">
                 <div class="row">
-                  <label class="col-md-3 text-white-50" for="lien">LIEN</label> 
+                  <label class="col-md-3 text-white-50" for="lien">LIEN:</label> 
                   <div class="col-md-9">
-                       <input id="lien" type="text" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
+                       <input id="lien" type="text" name="lien" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" ><br>
                        <p id="lie" style="display: none; color: red;" > Entrer le lien </p>
                   </div>
                 </div>
@@ -182,7 +183,7 @@
             <div class="form-group">
               <div class="row">
                 <div class="col-md-3 offset-md-9">
-                       <button id="btn" onclick="add()" class=" btn btn-light btn-rounded btn-lg text-black-50 ">AJOUTER</button>
+                       <button id="btn" type="submit" class=" btn btn-light btn-rounded btn-lg text-black-50 ">AJOUTER</button>
                   </div>
               </div>
             </div>
@@ -191,258 +192,61 @@
 </div>
 </div>
 <div id="listes">
-    <div id="pagesearch">
+  <section class="about-section" >
+    
 
-        <input class="rech" id="search" type="search " placeholder="recherch" >
+    <input class="form-control" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search..">
+    <br>
+    <input type="submit" name="affiché" value="affiché" onclick="ok()"><br>
+    <div class="table-responsive  table-striped ">
+      <table class="table ">
+        <thead>
+            <tr class="tabletext-center ">
+              <th  scope="col">Sujet</th>
+              <th  scope="col">Date</th>
+              <th  scope="col">Apprenant</th>
+              <th scope="col">Tags</th>
+              <th  scope="col">Line</th>
 
-        <button type="butt" >Affiche</button><br><br><br><br>
-        <div id="match-list"></div>
-   </div>
+            </tr>
+          </thead>
+          <tbody class="aff" id="myTable">
+            
+            
+          </tbody>
+    </table>
+    <script>
+var aff = document.querySelectorAll(".aff");
+function ok(){
+    var xReq = new XMLHttpRequest();
+xReq.open('get','nodjs.json');
+xReq.onload = function(){
+var xdata =JSON.parse(xReq.responseText);
+var a;
+for (i=0; i<xdata.length; i++){
+    a +="<tr>"+"<td>"+xdata[i].sujet+"</td>"+"<td>"+xdata[i].date+"</td>"+"<td>"+xdata[i].apprenant+"</td>"+"<td>"+xdata[i].lien+"</td>"+"<td>"+xdata[i].tags+"</td>"+"<tr>";
 
+  }
+ aff[0].insertAdjacentHTML('beforeend',a);
 
-
-<div id="pagelist">
-   
-
-   <div class="first">
-       <h1>liste de sujet du vielle</h1>
-
-       <div class="2th">
-<ul>           
-               <div id="demo">
-
-
-
-
-                 <!-- 1 -->
-               <li >intelligence Artificielle   
-                    <button type="button" data-toggle="collapse" data-target="#a1">+</button>
-                    </li>
-                      <div id="a1" class="collapse div1" >
-                        <form class="all">
-                            
-                         </form>
-                      </div>
-                    </div>
-                    <br>
-
-                  <!-- 2 -->
-
-
-               <li>adobe color (choix des colours par théme) 
-                   <button type="button" data-toggle="collapse" data-target="#a2">+</button>
-               </li>
-               <div id="a2" class="collapse div1" >
-                 <form class="all">
-                   
-                 </form>
-                </div>
-               </div>   <br>
-</ul><ul>
-              <!-- 3 -->
-
-               <li>crice sanitaire et applications mobiles    
-                 <button type="button" data-toggle="collapse" data-target="#a3">+</button>
-               </li><br>
-               <div id="a3" class="collapse div1" >
-                 <form class="all">
-                   
-                 </form>
-                </div>
-               </div>   <br>
-
-</ul><ul>
-
-                <!-- 4 -->
-
-
-               <li>hosting          
-                 <button type="button" data-toggle="collapse" data-target="#a4">+</button>
-               </li><br>
-               <div id="a4" class="collapse div1" >
-                 <form class="all">
-                  
-                 </form>
-                </div>
-                <br>
-               </ul><ul>
-               <!-- 5 -->
-
-
-               <li>bitcoin          
-                 <button type="button" data-toggle="collapse" data-target="#a5">+</button>
-               </li><br>
-
-               <div id="a5" class="collapse div1" >
-                 <form class="all">
-                   
-                 </form>
-                </div>
-                 <br>
-
-               </ul><ul>             
-
-               <!-- 6 -->
-
-              <li> marketing digital      
-               <button type="button" data-toggle="collapse" data-target="#a6">+</button>
-             </li><br>
-             <div id="a6" class="collapse div1" >
-               <form class="all">
-                 
-               </form>
-              </div>
-               <br>
-             </ul><ul>
-
-
-
-
-              <!-- 7 -->
-              <li>cybersécurité         
-               <button type="button" data-toggle="collapse" data-target="#a7">+</button>
-             </li><br>
-             <div id="a7" class="collapse div1" >
-               <form class="all">
-                 
-               </form>
-              </div>
-                <br>
-               </ul><ul>
-
-              <!-- 8 -->
-
-              <li>des robots pour lutter contre le couvid-19     
-               <button type="button" data-toggle="collapse" data-target="#a8">+</button>
-             </li><br>
-
-             <div id="a8" class="collapse div1" >
-               <form class="all">
-                 
-               </form>
-              </div>
-              <br>
-             </ul><ul>
-
-              <!-- 9 -->
-              <li>voitures sans polote        
-               <button type="button" data-toggle="collapse" data-target="#a9">+</button>
-             </li><br>
-
-             <div id="a9" class="collapse div1" >
-               <form class="all">
-                
-               </form>
-              </div>
-                <br>
-               </ul><ul>
-             <!-- 10 -->
-
-
-              <li>processus de l'ux design       
-               <button type="button" data-toggle="collapse" data-target="#a10">+</button>
-             </li><br>
-
-             <div id="a10" class="collapse div1" >
-               <form class="all">
-               
-               </form>
-              </div>
-             <br>
-           </ul><ul>
-                <!--11  -->
-
-              <li>données personnelles sur le web    
-               <button type="button" data-toggle="collapse" data-target="#a11">+</button>
-             </li><br>
-
-             <div id="a11" class="collapse div1" >
-               <form class="all">
-                 
-               </form>
-              </div>
-               <br>
-             </ul><ul>
-             <!-- 12 -->
-
-              <li>meilleurs platformes e-learning     
-               <button type="button" data-toggle="collapse" data-target="#a12">+</button>
-             </li><br>
-             <div id="a12" class="collapse div1" >
-               <form class="all">
-                
-               </form>
-              </div>
-             <br>
-           </ul><ul>
-
-               <!--13  -->
-
-              <li>edward snowden       
-               <button type="button" data-toggle="collapse" data-target="#a13">+</button>
-             </li><br>
-
-             <div id="a13" class="collapse div1" >
-               <form class="all">
-                
-               </form>
-              </div>
-               <br>
-             </ul><ul>
-             <!-- 14 -->
-
-              <li>dropshipping         
-               <button type="button" data-toggle="collapse" data-target="#a14">+</button>
-             </li><br>
-
-             <div id="a14" class="collapse div1" >
-               <form class="all">
-                 
-               </form>
-              </div>
-                
-               </ul><ul>
-               <!-- 15 -->
-
-              <li>white vs black hacker        
-               <button type="button" data-toggle="collapse" data-target="#a15">+</button>
-             </li><br>
-
-
-             <div id="a15" class="collapse div1" >
-               <form class="all">
-                 
-               </form>
-              </div>
-                
-
-
-
-
- </ul>        
-        
-</div>  
-
-   </div>
-
- 
-   <!-- <div class="container">
-       <h2>Simple Collapsible</h2>
-       <p>Click on the button to toggle between showing and hiding content.</p>
-       <button type="button"  >Simple collapsible</button>
        
-     </div>
--->
+};
+   
+xReq.send();
 
+};
+
+    </script>
+    </div>
+  </section>    
+  
+    
+</div>
 
 </div>
 
 
 
-<script src="vielle.js"></script>
-
-
-</div>
 <footer>
 <div>
 <nav class="navbar navf navbar-expand-sm navbar-default fixed-bottom">
@@ -465,28 +269,5 @@
   </nav>
 </div>
 </footer>
-<script>
-  var post =document.getElementById("btn");
-
-  
-post.addEventListener("click",function(){
-    event.preventDefault();
-   
-var xReq ={ Titre:"documen",Tiname:"documen",Tihhk:"documen",
-
-      Titre:document.getElementById('sujet').value ,
-      name: document.getElementById('apprenant').value,
-      date:document.getElementById('date').value ,
-      link:document.getElementById('lien').value ,
-      tags:document.getElementById('tags').value 
-
-    }
-    var myJSON = JSON.stringify(xReq);
-
-       console.log(myJSON);
-       document.forms[0].reset();
-    
-});
-</script>
 </body>
 </html>

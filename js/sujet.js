@@ -7,11 +7,21 @@ function ajouté(){
     document.getElementById("accuille").style.display="none";
     document.getElementById("ajouté").style.display="block";
     document.getElementById("listes").style.display="none";
+    document.getElementById("search").style.display="none";
+
 }
 function liste(){
   document.getElementById("accuille").style.display="none";
     document.getElementById("ajouté").style.display="none";
     document.getElementById("listes").style.display="block";
+    document.getElementById("search").style.display="none";
+
+}
+function recherch(){
+   document.getElementById("accuille").style.display="none";
+   document.getElementById("ajouté").style.display="none";
+   document.getElementById("listes").style.display="none";
+   document.getElementById("search").style.display="block";
 }
 function add(){
     event.preventDefault();
@@ -53,4 +63,51 @@ function add(){
     }
   
 }
-/*ajoute*/
+/*search*/
+
+
+function myFunction() {
+   var input, filter, table, tr, td, i, txtValue;
+   input = document.getElementById("myInput");
+   filter = input.value.toUpperCase();
+   table = document.getElementById("myTable");
+   tr = table.getElementsByTagName("tr");
+   for (i = 0; i < tr.length; i++) {
+     td = tr[i].getElementsByTagName("td")[0];
+     if (td) {
+       txtValue = td.textContent || td.innerText;
+       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+         tr[i].style.display = "";
+       } else {
+         tr[i].style.display = "none";
+       }
+     }       
+   }
+ }
+
+
+ 
+
+var aff = document.querySelectorAll("aff");
+
+  
+
+function ok(){
+    var xReq = new XMLHttpRequest();
+xReq.open('get','nodjs.json');
+xReq.onload = function(){
+var xdata =JSON.parse(xReq.responseText);
+var a;
+for (i=0; i<xdata.length; i++){
+    a +="<tr>"+"<td>"+xdata[i].sujet+"</td>"+"<td>"+xdata[i].date+"</td>"+"<td>"+xdata[i].apprenant+"</td>"+"<td>"+xdata[i].lien+"</td>"+"<td>"+xdata[i].tags+"</td>"+"<tr>";
+
+  }
+ aff[0].insertAdjacentHTML('beforeend',a);
+
+       
+};
+   
+xReq.send();
+
+};
+
