@@ -217,9 +217,10 @@
     </table>
     <script>
 var aff = document.querySelectorAll(".aff");
+var numberPage =1;
 function ok(){
     var xReq = new XMLHttpRequest();
-xReq.open('get','nodjs.json');
+xReq.open('get','nodjs'+numberPage+'.json');
 xReq.onload = function(){
 var xdata =JSON.parse(xReq.responseText);
 var a;
@@ -231,7 +232,7 @@ for (i=0; i<xdata.length; i++){
 
        
 };
-   
+   numberPage++;
 xReq.send();
 
 };

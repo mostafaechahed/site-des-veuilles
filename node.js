@@ -9,10 +9,10 @@ app.get('/myform', function(req, res){
       lien:req.query.lien,
       membres:req.query.apprenant
     }
-    let data = fs.readFileSync('nodjs.json');
+    let data = fs.readFileSync('nodjs1.json');
     let users = JSON.parse(data);
     users.push(myObject);
-    fs.writeFile('nodjs.json', JSON.stringify(users), function (err) {
+    fs.writeFile('nodjs1.json', JSON.stringify(users), function (err) {
         if (err) return console.log(err);
       });
      

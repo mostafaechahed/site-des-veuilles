@@ -88,26 +88,4 @@ function myFunction() {
 
  
 
-var aff = document.querySelectorAll("aff");
-
-  
-
-function ok(){
-    var xReq = new XMLHttpRequest();
-xReq.open('get','nodjs.json');
-xReq.onload = function(){
-var xdata =JSON.parse(xReq.responseText);
-var a;
-for (i=0; i<xdata.length; i++){
-    a +="<tr>"+"<td>"+xdata[i].sujet+"</td>"+"<td>"+xdata[i].date+"</td>"+"<td>"+xdata[i].apprenant+"</td>"+"<td>"+xdata[i].lien+"</td>"+"<td>"+xdata[i].tags+"</td>"+"<tr>";
-
-  }
- aff[0].insertAdjacentHTML('beforeend',a);
-
-       
-};
-   
-xReq.send();
-
-};
 
