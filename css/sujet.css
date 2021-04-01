@@ -1,4 +1,6 @@
-
+body{
+    background-color:#E8E7E2 ;
+}
 .li{
    
     margin-left: 100px;
@@ -7,6 +9,7 @@
 }
 nav{
     background-color: #E8E7E2;
+    border-bottom: 1px solid black;
 }
 #logo{
     width: 7vw;
@@ -23,16 +26,16 @@ nav{
 #d3{padding-top: 5vh;
     background-color: #B5B4B1;
    margin-bottom: auto;
+   padding-bottom: 20px ;
 }
 .lif{
    
-    margin-right: 100px;
-    margin-top: 20px;
+    margin-right: 80px;
+  
     color: #ebd792;
+    display: inline;
 }
-ul{
-    margin-left: 300px;
-}
+
 .media{
     width: 3vw;
     height: 6vh;
@@ -55,112 +58,41 @@ ul{
   .navf{
       background-color: #0C273D;
   }
-#ajouté{
+#ajouté{background-color: #E8E7E2;
     display: none;
+    padding: 100px;
+    color: #ebd792;
 }
-#listes{
+#listes{ 
+    color: #ebd792;
     display: none;
-}
-#search{
-    display: none;
-}
-.container1{
-    width: 50%;
-    height: 100vh;
-    background-color: #A6A2A1;
-    margin: 5%;
-   margin-left: 20%;
-   border-radius: 10px;
-   padding-bottom: 400px;
-
-   margin-bottom: 400px;
+    background-color: #E8E7E2;
 }
 h1{font-family:ocr a;}
-label{font-family:ocr a;}
+label{
+    font-family:ocr a;
+color: #ebd792;
+}
 .inpt{background-color: #E8E7E2;}
 #btn{background-color: #EBDB9F;
     font-family:ocr a;
     outline-style: none;
     border-radius: 30px;
-     margin-left: -130%;}
-
-     body {box-sizing: border-box;
-        background-color: #E8E7E2;
-        font-family: 'Open Sans', sans-serif;
-        /* display: flex; */
-        align-items: center;
-        justify-content: center;
-        /* min-height: 100vh; */
-        margin: 0;
-        display: grid;
-        grid-template-columns: 10,1fr;
-        grid-template-rows: 8,1fr;
-    }
-   
-    #pagelist{
-        /* width: 100%; */
-        background-color: #6961477e;
-        border-radius: 25px;
-        height: auto;
-        /* display: none; */
-        
-     
-    
-    }
-   
-   
-   
+}
     button{
         background-color:#ECDB9F;
-        
-        border: #ECDB9F;
-        
-      
-        
+      border: #ECDB9F;   
     }
     h1{
         text-align: center;
         justify-items: center;
-        padding: 25px;
     }
-    .rech{
-        padding: 25px;
-        border-radius: 20px ;
-        text-align: center;
-        color:#696866
-        ;
-        width: 45vw;
-        height: 5vh;
-        margin-top: auto;
-    border: none;
-    outline: none;
-    box-shadow: #ECDB9F 100px;
-    background-color:#ECDB9F ;
     
-    }
     .div1{
         width: 25vw;
         background-color: #6961477e;
         border-radius: 10px;
-       
-        
-    
-    }
-    .all{
-        padding: 20px;
-        width: auto;
-    }
-    
-    
-    
-    
-    #pagesearch{
-        display: none;
-        background-color: #9661477e;
-        justify-content: center;
-        border-radius: 25px;
-        height: 100vh;
-        width: 70vw;
-    }     
+ }
+
 
     

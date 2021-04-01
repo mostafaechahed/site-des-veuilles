@@ -7,21 +7,12 @@ function ajouté(){
     document.getElementById("accuille").style.display="none";
     document.getElementById("ajouté").style.display="block";
     document.getElementById("listes").style.display="none";
-    document.getElementById("search").style.display="none";
 
 }
 function liste(){
   document.getElementById("accuille").style.display="none";
     document.getElementById("ajouté").style.display="none";
     document.getElementById("listes").style.display="block";
-    document.getElementById("search").style.display="none";
-
-}
-function recherch(){
-   document.getElementById("accuille").style.display="none";
-   document.getElementById("ajouté").style.display="none";
-   document.getElementById("listes").style.display="none";
-   document.getElementById("search").style.display="block";
 }
 function add(){
     event.preventDefault();
@@ -55,12 +46,7 @@ function add(){
        document.getElementById("lie").style.display="block";   
     }
 
-    else  {
-        
-       
-       document.getElementById("pr7").innerHTML="salut msr/mm :"+fname+" "+lname+" "+"   votre age est:"+""+age+"ans";
-
-    }
+    
   
 }
 /*search*/

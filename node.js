@@ -3,11 +3,12 @@ var app = express();
 fs = require('fs');
 app.get('/myform', function(req, res){  
     let myObject={
-        date:req.query.date,
-        sujet:req.query.sujet
-      ,tags:req.query.tags,
-      lien:req.query.lien,
-      membres:req.query.apprenant
+      sujet:req.query.sujet,
+      date:req.query.date,
+      apprenant:req.query.apprenant,
+      tags:req.query.tags,
+      lien:req.query.lien
+      
     }
     let data = fs.readFileSync('nodjs1.json');
     let users = JSON.parse(data);
