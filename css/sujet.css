@@ -61,7 +61,7 @@ nav{
 #ajouté{background-color: #E8E7E2;
     display: none;
     padding: 100px;
-    color: #ebd792;
+    color: #000000;
 }
 #listes{ 
     color: #ebd792;
@@ -78,6 +78,9 @@ color: #ebd792;
     font-family:ocr a;
     outline-style: none;
     border-radius: 30px;
+}
+.text-dark-50{
+    color: #000000;
 }
     button{
         background-color:#ECDB9F;

@@ -17,20 +17,20 @@
 
 <nav class="navbar navbar-expand-md  ">
   <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" style="width:40px;"></a>
-  <button class="navbar-toggler btn-warning" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   
   <div class="collapse navbar-collapse " id="collapsibleNavbar">
 
     <ul class="nav nav-tabs d-flex justify-content-end">
-      <li class="nav-item li text-warning nav-link"
+      <li class="nav-item li text-dark nav-link"
          onclick="accuille()">Accuille
       </li>
-      <li class="nav-item li text-warning nav-link" 
+      <li class="nav-item li text-dark nav-link" 
          class=""onclick="ajouté()" >Ajouté un sujet
       </li>
-      <li class="nav-item li text-warning nav-link"
+      <li class="nav-item li text-dark nav-link"
          onclick="liste()" >Liste des sujets
       </li>
      
@@ -45,7 +45,7 @@
   
 
   <div class="container-fluid">
-      <div id="accuille" style="padding-bottom: 200px;">
+      <div id="accuille" >
    <div class="row" id="d1">
   <div class="col-md-1">
     <div id="media">
@@ -133,10 +133,10 @@
 
 <div class="container-fluid" id="ajouté">
   <form  action="http://127.0.0.1:4000/myform" method="GET"   class="needs-validation" novalidate>
-    <h1 class="text-center  text-warning-50 ">AJOUTE LE SUJET</h1>
+    <h1 class="text-center  text-dark-50 ">AJOUTE LE SUJET</h1>
     <div class="form-group">
       <div class="form-row">
-     <label class="col-md-3 text-warning-50" for="sujet">TITRE DU SUJET:</label> 
+     <label class="col-md-3 text-dark-50" for="sujet">TITRE DU SUJET:</label> 
      <div class="col-md-9">
          <input id="sujet" type="text" name="sujet" class="form-control rounded-pill py-2 border-right-0 border" required ><br>
      </div>
@@ -145,7 +145,7 @@
  <br>
  <div class="form-group">
    <div class="row">
-     <label class="col-md-3 text-warning-50" for="date">DATE:</label> 
+     <label class="col-md-3 text-dark-50"  for="date">DATE:</label> 
      <div class="col-md-9">
           <input id="date" type="date" name="date" class="form-control rounded-pill py-2 border-right-0 border inpt" name="date" required ><br>
      </div>
@@ -154,7 +154,7 @@
  <br>
  <div class="form-group">
      <div class="row">
-       <label class="col-md-3 text-warning-50 " for="apprenant">LES APPRENANTS:</label> 
+       <label class="col-md-3 text-dark-50 " for="apprenant">LES APPRENANTS:</label> 
        <div class="col-md-9">
             <input id="apprenant" type="text" name="apprenant" class="form-control rounded-pill py-2 border-right-0 border inpt"  required><br>
             
@@ -164,7 +164,7 @@
    <br>
    <div class="form-group">
      <div class="row">
-       <label class="col-md-3 text-warning-50" for="tags">TAGS:</label> 
+       <label class="col-md-3 text-dark-50" for="tags">TAGS:</label> 
        <div class="col-md-9">
             <input id="tags" type="text" name="tags" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" required><br>
            
@@ -175,7 +175,7 @@
 
    <div class="form-group">
      <div class="row">
-       <label  class="col-md-3 text-warning-50" for="lien">LIEN:</label> 
+       <label  class="col-md-3 text-dark-50" for="lien">LIEN:</label> 
        <div class="col-md-9">
             <input id="lien" type="text" name="lien" class="form-control rounded-pill py-2 border-right-0 border inpt" name="" required><br>
             
